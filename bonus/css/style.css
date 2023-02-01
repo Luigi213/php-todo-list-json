@@ -1,3 +1,7 @@
 body {
     background-color: #001632;
 }
+
+.cur {
+    cursor: pointer;
+}

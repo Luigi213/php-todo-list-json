@@ -25,6 +25,16 @@ createApp({
         deleteObject(index) {
             this.toDoList.splice(index, 1);
         },
+        listChange(index) {
+            let change = this.toDoList[index];
+            if (change.status === false) {
+                change.status = true
+            }
+            else (
+                change.status = false
+            )
+            return change
+        }
     },
     mounted() {
         axios.get(this.apiUrl).then((response) => {

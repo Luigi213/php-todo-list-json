@@ -24,8 +24,8 @@
                     </div>
                     <div class="col-12 d-flex align-items-center flex-column w-25 bg-white rounded-1">
                         <ul class="list-unstyled text-black w-100 text-center">
-                            <li class="d-flex justify-content-between border-bottom p-4" v-for="(list,index) in toDoList">
-                                <div>
+                            <li class="d-flex justify-content-between border-bottom p-4" :class="(list.status) ? 'text-decoration-line-through' : ''" v-for="(list,index) in toDoList">
+                                <div class="cur" @click="listChange(index)">
                                     {{list.language}}  
                                 </div>
                                 <div>

@@ -23,12 +23,16 @@
                         <h1>Todo List</h1>
                     </div>
                     <div class="col-12 d-flex align-items-center flex-column w-25 bg-white rounded-1">
-                        <div class="d-flex text-decoration-line-through justify-content-between text-black border-bottom w-100 p-4" v-for="list in toDoList">
-                            {{list.language}}  
-                            <div>
-                                <button class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
-                            </div> 
-                        </div>
+                        <ul class="list-unstyled text-black w-100 text-center">
+                            <li class="d-flex justify-content-between text-decoration-line-through border-bottom p-4" v-for="(list,index) in toDoList">
+                                <div>
+                                    {{list.language}}  
+                                </div>
+                                <div>
+                                    <button class="btn btn-danger" @click="deleteObject(index)"><i class="fa-solid fa-trash-can"></i></button>
+                                </div> 
+                            </li>
+                        </ul>
                     </div>
                     <div class="col-12 mt-4">
                         <div class="row justify-content-center">
