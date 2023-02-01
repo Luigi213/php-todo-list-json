@@ -1,0 +1,22 @@
+[
+    {
+        "language": "HTML",
+        "status": false
+    },
+    {
+        "language": "CSS",
+        "status": false
+    },
+    {
+        "language": "Javascript",
+        "status": false
+    },
+    {
+        "language": "PHP",
+        "status": false
+    },
+    {
+        "language": "Lavarel",
+        "status": false
+    }
+]
