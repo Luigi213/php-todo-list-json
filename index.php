@@ -24,7 +24,7 @@
                         </div>
                     </div>
                     <div class="col-6">
-                        <input type="text" v-model="language" @keyup.enter="addList">
+                        <input type="text" v-model="lang" @keyup.enter="addList">
                         <button type="sumbit" @click="addList">Invia</button>
                     </div> 
                 </div>
