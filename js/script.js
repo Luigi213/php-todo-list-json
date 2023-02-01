@@ -18,7 +18,7 @@ createApp({
                 headers: { 'Content-Type': 'multipart/form-data' }
             }).then((response) => {
                 this.lang = '';
-                console.log(response.data)
+                this.toDoList = response.data
             })
 
         }

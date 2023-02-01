@@ -17,13 +17,13 @@
     <body>
         <div id="app">
             <div class="container">
-                <div class="row justify-content-center">
+                <div class="row text-center">
                     <div class="col-12">
                         <div v-for="list in toDoList">
                             {{list.language}}
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-12">
                         <input type="text" v-model="lang" @keyup.enter="addList">
                         <button type="sumbit" @click="addList">Invia</button>
                     </div> 
