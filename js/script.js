@@ -3,13 +3,14 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            apiUrl: 'serverList.php'
+            apiUrl: 'serverList.php',
+            toDoList: [],
         }
     },
     methods: {
         getList() {
             axios.get(this.apiUrl).then((response) => {
-                console.log(response.data)
+                this.toDoList = response.data
             })
         }
     },
