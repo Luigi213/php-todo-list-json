@@ -5,16 +5,25 @@ createApp({
         return {
             apiUrl: 'serverList.php',
             toDoList: [],
+            language: ''
         }
     },
     methods: {
-        getList() {
-            axios.get(this.apiUrl).then((response) => {
-                this.toDoList = response.data
-            })
+        addList() {
+            let obj = {
+                language: this.language,
+                status: false
+            };
+            axios.post(this.apiUrl, obj, {
+                headers: { 'Content-Type': 'multipart/form-data' }
+            }).the((response))
+            this.language = ''
+
         }
     },
     mounted() {
-        this.getList()
+        axios.get(this.apiUrl).then((response) => {
+            this.toDoList = response.data
+        })
     },
 }).mount('#app')
