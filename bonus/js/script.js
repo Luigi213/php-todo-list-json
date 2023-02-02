@@ -22,7 +22,14 @@ createApp({
 
         },
         deleteObject(index) {
-            this.toDoList.splice(index, 1);
+            const delect = {
+                element: index,
+            };
+            axios.post(this.apiUrl, delect, {
+                headers: { 'Content-Type': 'multipart/form-data' }
+            }).then((response) => {
+                this.toDoList = response.data
+            })
         },
         listChange(index) {
             let change = this.toDoList[index];
