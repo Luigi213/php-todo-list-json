@@ -13,12 +13,14 @@ createApp({
             const obj = {
                 language: this.lang,
             };
-            axios.post(this.apiUrl, obj, {
-                headers: { 'Content-Type': 'multipart/form-data' }
-            }).then((response) => {
-                this.lang = '';
-                this.toDoList = response.data
-            })
+            if (this.lang.trim() != '' && this.lang != '') {
+                axios.post(this.apiUrl, obj, {
+                    headers: { 'Content-Type': 'multipart/form-data' }
+                }).then((response) => {
+                    this.lang = '';
+                    this.toDoList = response.data
+                })
+            }
 
         },
         deleteObject(index) {
