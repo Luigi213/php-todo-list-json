@@ -12,7 +12,6 @@ createApp({
         addList() {
             const obj = {
                 language: this.lang,
-                status: false,
             };
             axios.post(this.apiUrl, obj, {
                 headers: { 'Content-Type': 'multipart/form-data' }
